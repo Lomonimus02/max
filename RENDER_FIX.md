@@ -55,10 +55,15 @@ services:
 
 ## 📝 Изменения
 
+### Первое исправление (ba9fc2d)
+- Переместили `http-server` из `devDependencies` в `dependencies`
 - Изменен тип окружения с `static` на `node`
-- Изменена команда build с `npm run build` на `npm install`
 - Удалена строка `staticPublishPath: ./`
-- `http-server` теперь будет установлен в production
+
+### Второе исправление (e6ceca3)
+- Изменена build команда в `render.yaml` на `npm ci`
+- Изменена build команда в `package.json` на `npm install`
+- Это гарантирует, что зависимости будут установлены перед запуском сервиса
 
 ## 🚀 Результат
 
@@ -67,9 +72,10 @@ services:
 2. ✅ `npm start` запустит `http-server -p 8000`
 3. ✅ Сайт будет доступен по URL Render
 
-## 📌 Коммит
+## 📌 Коммиты
 
 ```
+e6ceca3 - Fix build command - npm install in build step to ensure dependencies are installed
 ba9fc2d - Fix Render deployment - Move http-server to dependencies and update render.yaml
 ```
 
