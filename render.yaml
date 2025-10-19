@@ -1,10 +1,9 @@
 services:
   - type: web
     name: consulting-website
-    env: static
-    buildCommand: npm run build
+    env: node
+    buildCommand: npm install
     startCommand: npm start
-    staticPublishPath: ./
     envVars:
       - key: NODE_ENV
         value: production
