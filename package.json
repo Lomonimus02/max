@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "http-server -p 8000 -o",
     "start": "http-server -p 8000",
-    "build": "echo 'This is a static website, no build needed'"
+    "build": "npm install"
   },
   "keywords": [
     "consulting",
