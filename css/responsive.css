@@ -1,0 +1,433 @@
+/* ===================================
+   Responsive Design - Mobile First
+   =================================== */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3rem;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        height: 100vh;
+        min-height: 600px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* Sections */
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* Services */
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    /* Profile Cards - Mobile */
+    .profile-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-cards-grid .profile-card:nth-last-child(1):nth-child(odd) {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    /* Portfolio Carousel - Mobile Centered */
+    .portfolio-carousel-wrapper {
+        overflow: hidden;
+        padding: var(--spacing-lg) 1rem;
+    }
+
+    .portfolio-carousel {
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        padding: 0;
+    }
+
+    .portfolio-card {
+        flex: 0 0 calc(100vw - 2rem);
+        min-width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
+        width: calc(100vw - 2rem);
+        height: 400px;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        margin: 0 auto;
+    }
+
+    .portfolio-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-controls {
+        display: none;
+    }
+    
+    /* Clients */
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .client-logo-item {
+        padding: 0.4rem;
+        min-height: 100px;
+        min-width: 160px;
+        flex-shrink: 0;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .client-logo-item img {
+        max-width: 155px;
+        max-height: 95px;
+    }
+
+    /* Clients Carousel - Mobile version */
+    .clients-carousel {
+        animation: scroll-right-mobile 16s linear infinite !important;
+    }
+
+    @keyframes scroll-right-mobile {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(var(--scroll-distance));
+        }
+    }
+
+    .clients-carousel-wrapper:hover .clients-carousel {
+        animation-play-state: running !important;
+    }
+    
+    /* Contact */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info {
+        text-align: center;
+    }
+    
+    .footer-contacts {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+    
+    .nav-logo img {
+        height: 40px;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .service-icon svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+    
+    .service-list li {
+        font-size: 0.9rem;
+    }
+    
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-card {
+        flex: 0 0 calc(100vw - 1.5rem);
+        min-width: calc(100vw - 1.5rem);
+        max-width: calc(100vw - 1.5rem);
+        width: calc(100vw - 1.5rem);
+        height: 350px;
+        box-sizing: border-box;
+    }
+
+    .portfolio-carousel {
+        gap: 16px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-logo-item img {
+        max-width: 155px;
+        max-height: 95px;
+    }
+
+    .clients-carousel {
+        animation: scroll-right-mobile 16s linear infinite !important;
+    }
+
+    @keyframes scroll-right-mobile {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(var(--scroll-distance));
+        }
+    }
+
+    .clients-carousel-wrapper:hover .clients-carousel {
+        animation-play-state: running !important;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-item a {
+        font-size: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.85rem;
+        font-size: 0.95rem;
+    }
+    
+    .submit-button {
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .footer-logo img {
+        height: 40px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* High Resolution Displays */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .nav-toggle,
+    .cta-button,
+    .contact-form,
+    .submit-button {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero-background,
+    .hero-overlay {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode Support (if system preference changes) */
+@media (prefers-color-scheme: light) {
+    /* Keep dark theme regardless - this is intentional design choice */
+}

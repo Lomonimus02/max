@@ -1,0 +1,23 @@
+{
+  "name": "consulting-website",
+  "version": "1.0.0",
+  "description": "Bar & Event Consulting Dubai - Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 8000 -o",
+    "start": "http-server -p 8000",
+    "build": "echo 'This is a static website, no build needed'"
+  },
+  "keywords": [
+    "consulting",
+    "bar",
+    "event",
+    "dubai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
